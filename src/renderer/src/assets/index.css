@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Defines a layer called base for tailwind, the "base" layer is typically used for global styles that apply to the entire document. */
+@layer base {
+  #root {
+    @apply h-full;
+  }
+
+  html,
+  body {
+    /* Within body it will be impossible to select text like in most desktop applications */
+    @apply h-full;
+
+    /* Within body it will be impossible to select text like in most desktop applications */
+    @apply select-none;
+
+    @apply bg-transparent;
+
+    @apply font-mono antialiased text-white;
+
+    @apply overflow-hidden;
+  }
+}

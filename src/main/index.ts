@@ -11,6 +11,25 @@ function createWindow(): void {
     show: false,
     autoHideMenuBar: true,
     ...(process.platform === 'linux' ? { icon } : {}),
+
+    // window spawns in the center of the desktop
+    center: true,
+
+    // sets title of window
+    title: 'Markup Electron',
+
+    // disables window frame so we can add a custom styled one later
+    frame: false,
+
+    // fancy transparent effect that has a blur of stuff behind the window
+    vibrancy: 'under-window',
+
+    // another setting that hides title bar, doesnt work on macos
+    titleBarStyle: 'hidden',
+
+    // sets position of macos traffic light buttons
+    trafficLightPosition: { x: 15, y: 10 },
+
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: true,

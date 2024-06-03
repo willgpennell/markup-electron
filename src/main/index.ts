@@ -30,6 +30,8 @@ function createWindow(): void {
     // sets position of macos traffic light buttons
     trafficLightPosition: { x: 15, y: 10 },
 
+    backgroundMaterial: 'acrylic',
+
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: true,

@@ -1,7 +1,10 @@
+import { RootLayout, Sidebar, Content } from '@/components'
+
 export default function App() {
   return (
-    <div className="flex h-full items-center justify-center">
-      <div className="text-4xl text-blue-400">Hello World</div>
-    </div>
+    <RootLayout>
+      <Sidebar className="p-2 border-4 border-red-500">Sidebar</Sidebar>
+      <Content className="border-4 border-blue-500">Content</Content>
+    </RootLayout>
   )
 }

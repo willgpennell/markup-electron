@@ -27,6 +27,12 @@ function createWindow(): void {
     // another setting that hides title bar, doesnt work on macos
     titleBarStyle: 'hidden',
 
+    titleBarOverlay: {
+      height: 32,
+      symbolColor: '#ffffff',
+      color: '#27272a'
+    },
+
     // sets position of macos traffic light buttons
     trafficLightPosition: { x: 15, y: 10 },
 

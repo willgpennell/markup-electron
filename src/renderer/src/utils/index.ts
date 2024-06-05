@@ -2,10 +2,10 @@ import clsx, { ClassValue } from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
 // defines a new Intl.DateTimeFormat obj with certain options which allows formatting of milliseconds to datetime
-const dateFormatter = new Intl.DateTimeFormat('en-US', {
+const dateFormatter = new Intl.DateTimeFormat(window.context.locale, {
   dateStyle: 'short',
   timeStyle: 'short',
-  timeZone: 'UTC'
+  timeZone: window.context.timeZone
 })
 
 // function that accepts ms variable of type number and formats it according to the dateFormatter obj defined above

@@ -6,7 +6,9 @@ if (!process.contextIsolated) {
 
 try {
   contextBridge.exposeInMainWorld('context', {
-    // TODO
+    // passes in locale into the renderer from navigator API
+    locale: navigator.language,
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
   })
 } catch (error) {
   console.error(error)

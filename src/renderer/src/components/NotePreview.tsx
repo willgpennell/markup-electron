@@ -1,6 +1,7 @@
 import { cn } from '@renderer/utils'
 import { NoteInfo } from '@shared/models'
 import { ComponentProps } from 'react'
+import { formatDateFromMs } from '@renderer/utils'
 
 /**
  * defines the shape of the props that will be passed into NotePreview, so the props will include NoteInfo,
@@ -18,6 +19,8 @@ export function NotePreview({
   className,
   ...props
 }: NotePreviewProps) {
+  const date = formatDateFromMs
+
   return (
     <div
       className={cn(
